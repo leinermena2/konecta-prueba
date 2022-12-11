@@ -3,6 +3,7 @@
 let userId;
 let userName;
 $(document).ready(function () {
+
     // get user information 
 
     let userData = localStorage.getItem('usuario');
@@ -43,6 +44,8 @@ $(document).ready(function () {
         $("#productos").css('display', 'none');
         $("#categorias").css('display', 'none');
     });
+
+    $("#tabProductos").trigger("click");    
 });
 
 

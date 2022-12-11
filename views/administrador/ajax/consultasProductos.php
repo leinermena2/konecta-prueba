@@ -8,6 +8,7 @@ switch ($type) {
     case 1: //Mostrar productos
         $getProductos = "SELECT * FROM vproductos";
         $execute = mysqli_query($con, $getProductos);
+
         $dataR = [];
         foreach ($execute as $value) {
             $dataR[] = $value;
