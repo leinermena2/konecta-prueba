@@ -1,0 +1,25 @@
+EL PROYECTO ES MUY SENCILLO NO REQUIERE QUE SE ISNTALEN MODULOS NI FRAMEWORKS, YA ESO ESTA DEFINIDO EN UN ARCHIVO DEL PROYECTO IMPORTANTE TENER EN CUENTA LAS RELACIONES  EN LA BASE DE DATOS YLA CREACION DE LAS VISTAS AGREGO EL CODIGO DE COMO SE CREAN LAS VISTAS AUNQUE EN EL ARCHIVO SQL YA ESTA
+
+
+create or replace view vcotizaciones as (
+SELECT det.item_id, cot.id_cotizacion as cotID, cot.cliente as cliente, cot.sub_total as subtotal, cot.total as total, cot.fecha_creacion as creacion_cot, cot.usuario_id as user_id,us.nombre as nombre_user,cot.estado as estado,det.cantidad as cantidad, det.costo_unitario as unitarioItem, det.total as totalItem, prod.stock as stock, prod.referencia as referencia 
+                FROM cotizacion cot INNER JOIN usuarios us ON us.id_usuario = cot.usuario_id 
+                INNER JOIN detalle_cotizacion det ON det.id_cotizacion = cot.id_cotizacion
+                INNER JOIN productos prod ON prod.id_producto = det.item_id
+)
+
+create or replace view vproductos as (
+
+SELECT pdt.* , bd.nombre as nombre_bodega, ct.nombre as nombre_categoria 
+        FROM productos pdt INNER JOIN bodegas bd ON bd.id = pdt.bodega_id INNER JOIN categorias ct ON ct.id = pdt.categoria_id
+
+);
+
+
+Crean un usuario como administrador , el sistema les inicia sesion y podran comenzara utilizar el crud, agrego link de ngrok para que lo puedan usar online
+
+https://7370-190-24-176-69.ngrok.io/konecta/
+
+
+Espero el proyecto sea de su agrado, ahi cosas por ultimar pero por falta de tiempo no pude ser mas detallista. si tienen alguna duda pueden comunicarse conmigo al correo
+leinermenar@outlook.com
