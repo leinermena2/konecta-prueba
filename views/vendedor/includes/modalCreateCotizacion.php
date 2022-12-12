@@ -17,7 +17,7 @@
                         <button class="btn btn-primary rounded-pill" onclick="generateNewForm()"> Agregar un producto</button>
                         <div id="formProducts"></div>
                         <div id="detallesCotizacion">
-                    <table class="table">
+                    <table class="table" >
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -37,7 +37,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal"
                     id="btnCloseModalCreateCot">Cerrar</button>
-                <button type="button" class="btn btn-danger rounded-pill">Guardar</button>
+                <button type="button" class="btn btn-danger rounded-pill" onclick="CreateCot()">Guardar</button>
             </div>
         </div>
     </div>

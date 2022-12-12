@@ -27,7 +27,7 @@ switch ($type) {
         $nombre = $informacion[0];
         $apellido = $informacion[1];
         $tipo_usuario_id = $informacion[2];
-        $contraseña = md5($informacion[3]);
+        $contraseña = $informacion[3];
 
         $ConsultaExistencia = $con->query("SELECT count(id_usuario) as existencia FROM usuarios WHERE nombre = '$nombre'");
 

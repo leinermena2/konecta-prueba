@@ -18,6 +18,7 @@
         <div id="productos">
             <button type="button" class="btn btn-primary rounded-pill" data-bs-toggle="modal"
                 data-bs-target="#crearProductoModal" onclick="loadBodega()"><i class="fa-solid fa-plus"></i> Crear nuevo producto</button>
+                <a href="../vendedor/" class="btn btn-danger rounded-pill">IR AL PANEL DE VENDEDORES</a>
                 <div id="contenedorProductos" class="mt-2"></div>
                 <?php include 'includes/tablaProductos.php'; ?>
         </div>
@@ -29,7 +30,10 @@
             <input type="text" class="form-control rounded-pill" id="SearchCategorias">
             <div id="contenedorCategorias" class="mt-2"></div>
         </div>
-        <div id="reportes"></div>
+        
+        <div id="reportes">
+            <h3>LOS REPORTES AUN NO ESTAN DISPONIBLES, LAS CONSULTAS SERAN AJUNTADAS AL CORREO ELECTRONICO</h3>
+        </div>
     </div>
     <?php include 'includes/modalCreateCategoria.php'; ?>
     <?php include 'includes/modalEditCategoria.php'; ?>

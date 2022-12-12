@@ -5,6 +5,7 @@ function crearCuenta() {
     let apellido = $("#apellidoR").val();
     let tipo_usuario_id = $("#tipo_usuario_id option:selected").val();
     let contrasena = MD5($("#passwR").val());
+    let contrasenaLog = $("#passwR").val();
 
     let arrDatos = [
         nombre,
@@ -85,7 +86,7 @@ function crearCuenta() {
                         })
                     }
                     $("#nombre").val(nombre);
-                    $("#passw").val(contrasena);
+                    $("#passw").val(contrasenaLog);
                     $("#loginButton").trigger("click");
                     if (response.data == 2) {
                         Swal.fire({

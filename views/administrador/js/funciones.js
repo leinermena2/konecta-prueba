@@ -9,7 +9,7 @@ $(document).ready(function () {
     let userData = localStorage.getItem('usuario');
 
     userId = userData[0];
-    userName = userData[2] + " " + userData[3];
+    userName = userData[2];
 
 
     $("#productos").css("display", "block");
@@ -232,7 +232,7 @@ function getProductos() {
                     "<td>" + element['precio'] + "</td>" +
                     "<td>" + element['peso'] + "</td>" +
                     "<td><button class='button is-danger is-small btnEditP'  data-bs-toggle='modal' data-bs-target='#editProductoModal' idProd='" + element['id_producto'] + "'><i class='fa-solid fa-memo-circle-info'></i> Editar</button></td>" +
-                    "<td><button class='button is-primary is-small btnMHP'  data-bs-toggle='modal' data-bs-target='#modalHistorialproductos' idProd='" + element['id_producto'] + "'><i class='fa-solid fa-folder-tree'></i> Historial</button></td>" +
+                    "<td><button class='button is-warning is-small btnMHP'  data-bs-toggle='modal' data-bs-target='#modalHistorialproductos' idProd='" + element['id_producto'] + "'><i class='fa-solid fa-folder-tree'></i> Historial</button></td>" +
                     "</tr>";
                 $("#tbodyItems").append(tableBody);
                 $('#tableItems').DataTable();
